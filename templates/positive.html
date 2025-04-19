@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positive Vibes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .book-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .book {
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 12px;
+            width: 200px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .book img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .book h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .book a {
+            color: #00c4cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color:green;">Positive Sentiment Detected</h1>
+        <p class="description-tile">{{ description }}</p>
+        <p class="suggestion-tile">{{ suggestion }}</p>
+        
+        <h2>Books to Boost Your Positivity</h2>
+        <div class="book-gallery">
+            <div class="book">
+                <img src="{{ url_for('static', filename='images/gita.jpg') }}" alt="Bhagavad Gita">
+                <h3>Bhagavad Gita</h3>
+                <p style="font-size: 14px;">Timeless wisdom on life, karma and purpose. A must-read for clarity and strength.</p>
+                <a href="https://drive.google.com/file/d/1SYSdGIPoAHyzW4no_O7QKHSiu8MkAa_A/view?usp=drivesdk" target="_blank">Read Now</a>
+            </div>
+            <div class="book">
+                <img src="{{ url_for('static', filename='images/chanakya.jpg') }}" alt="Chanakya Niti">
+                <h3>Chanakya Niti</h3>
+                <p style="font-size: 14px;">Master the art of strategy, decision-making, and discipline with ancient Indian insights.</p>
+                <a href="https://drive.google.com/file/d/1SYgVlaiykKPe688zM6JibHPFLpCccWik/view?usp=drivesdk" target="_blank">Read Now</a>
+            </div>
+            <div class="book">
+                <img src="{{ url_for('static', filename='images/richdad.jpg') }}" alt="Rich Dad Poor Dad">
+                <h3>Rich Dad Poor Dad</h3>
+                <p style="font-size: 14px;">Learn how money works, and shift your mindset from employee to investor.</p>
+                <a href="https://drive.google.com/file/d/1S_izRebajdIVbDov0rKcqWGp6Y45b8pm/view?usp=drivesdk" target="_blank">Read Now</a>
+            </div>
+        </div>
+        <div style="margin-top: 50px; text-align: center;">
+            <h2 style="color: #0cea7e; font-size: 28px; font-weight: bold;">Thank You for Spreading Positivity!</h2>
+            <p style="color: red; font-size: 18px; margin-top: 10px;">Keep growing, keep glowing. You're doing amazing!</p>
+        </div>
+    </div>
+</body>
+</html>

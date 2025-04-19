@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Result</h1>
+        <div class="tile sentiment-tile">
+            Sentiment: {{ sentiment }}
+        </div>
+        <div class="tile description-tile">
+            Description: {{ description }}
+        </div>
+        <div class="tile suggestion-tile">
+            Suggestions: {{ suggestion }}
+        </div>
+        <form method="GET" action="{{ url_for(redirect_to) }}">
+            <button type="submit">Go to Suggestion Page</button>
+        </form>
+    </div>
+</body>
+</html>
